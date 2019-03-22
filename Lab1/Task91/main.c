@@ -1,6 +1,6 @@
 #include <stdio.h>
-
 #include <stdlib.h>
+
 void getch()
 {
   #ifdef WIN32
