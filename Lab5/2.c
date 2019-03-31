@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 
   б) Следовательно, переменная *p - целое число 5.
 
-  в) typeof(p) == *int, typeof(*p) == int
+  в) typeof(p) == "int *", typeof(*p) == "int"
   */
 
   int *p = &val1;
