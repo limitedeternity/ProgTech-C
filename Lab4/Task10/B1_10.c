@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <string.h>
 
 void getch()
 {
@@ -9,6 +9,17 @@ void getch()
 #else
   system("read -n1 -p '' key");
 #endif
+}
+
+void print_string(char *str, int from, int to)
+{
+  char *pos = str;
+  int i;
+
+  for (i = from; i < to; i++)
+  {
+    printf("%c", *(pos + i));
+  }
 }
 
 int main(int argc, char const *argv[])
@@ -41,33 +52,32 @@ int main(int argc, char const *argv[])
   C отрицательными - зеркально.
   */
 
-  long int bin;
-  for (int bit = (abs(num) > 255) ? (abs(num) > 65535) ? 31 : 15 : 7; bit >= 0; bit--)
+  int size = (abs(num) > 255) ? (abs(num) > 65535) ? 31 : 15 : 7;
+  char *bin = (char *)malloc(sizeof(char *));
+
+  for (int bit = size; bit >= 0; bit--)
   {
-    if (bit == rembit) {
-      continue;
-    }
-
-    int bindig = (abs(num) >> bit) & 1;
-
     if (num >= 0)
     {
-      bin += bindig * (int)pow(10, bit);
+      bin[size - bit] = ((abs(num) >> bit) & 1) + '0';
     }
     else
     {
       if (bit != 0)
       {
-        bin += (!bindig) * (int)pow(10, bit); // !x == x ^ 1
+        bin[size - bit] = (!((abs(num) >> bit) & 1)) + '0'; // !x == x ^ 1
       }
       else
       {
-        bin += (!bindig) + 1;
+        bin[size - bit] = ((!((abs(num) >> bit) & 1)) + 1) + '0';
       }
     }
   }
 
-  printf("%ld\n", bin);
+  print_string(bin, 0, strlen(bin) - rembit);
+  print_string(bin, strlen(bin) - rembit + 1, strlen(bin));
+  printf("\n");
+
   getch();
   return 0;
 }
