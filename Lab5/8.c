@@ -13,7 +13,7 @@ int main(void)
   int *x, *link, y;
     
   link=&y;
-  x=*link;
+  x=link;
 
   return 0;
 }

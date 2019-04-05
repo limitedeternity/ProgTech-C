@@ -13,6 +13,6 @@ int main(int argc, char const *argv[])
   value2 = *lPtr;          // г
   printf("%d\n", value2);  // д
   printf("%p\n", &value1); // е
-  printf("%p\n", lPtr);
+  printf("%p\n", lPtr);    // ж
   return 0;
 }

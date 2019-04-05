@@ -17,11 +17,11 @@ int main(int argc, char const *argv[])
 
   if ((2.0 * x) + y >= 4.0 && x + y <= 6.0 && y >= 0.0 && x >= 0.0)
   {
-    printf("+");
+    printf("+\n");
   }
   else
   {
-    printf("-");
+    printf("-\n");
   }
 
   getch();

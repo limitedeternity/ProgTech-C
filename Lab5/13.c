@@ -10,5 +10,14 @@ int main(int argc, char const *argv[])
 
   s = (int *)&r;
 
+  printf("%p\n", s);
+  printf("%p\n", r);
+  printf("%p\n", q);
+  printf("%p\n", p);
+
+  printf("%p\n", *s);
+  printf("%p\n", *r);
+  printf("%p\n", *q);
+  printf("%p\n", *p);
   return 0;
 }

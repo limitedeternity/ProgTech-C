@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
   б) type mismatch (char и void), присвоить не получится
   в) указатель - не число, нужно разыменовать, чтобы вывести
   г) можно, char можно преобразовать к int и записать в адрес, указанный q
-  д) type mismatch (int * и void *), сравнение некорректно
+  д) можно
   е) type mismatch (int * и char *), сравнение некорректно
   */
 

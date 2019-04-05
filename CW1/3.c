@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
   double x, y;
   scanf("%lf %lf", &x, &y);
 
-  if (pow(x - 2.0, 2.0) + pow(y, 2.0) <= pow(5.5, 2.0) && x >= 2.0)
+  if (pow(x, 2.0) + pow(y, 2.0) <= pow(6.0, 2.0) && x >= 2.0)
   {
     printf("+");
   }
