@@ -29,18 +29,17 @@ int main(int argc, char const *argv[])
   int *q = &val2;
   char *r = &ch1;
 
-  *r = *p; // а
+  *r = *p;      // а
+  *q = (int)*r; // б
 
-  if (r != NULL) // <-- б
-    *r = *NULL;  // <-- б
+  if (r != NULL) // <-- в
+    *r = *NULL;  // <-- в
 
-  if (q == p)        // <-- в
-    printf("%d", q); // <-- в
+  if (q > NULL) // <-- г
+    *q = *p;    // <-- г
 
-  *q = (int)*r; // г
-
-  if (q > NULL) // <-- д
-    *q = *p;    // <-- д
+  if (q == p)        // <-- д
+    printf("%d", q); // <-- д
 
   if (q != r)       // <-- е
     scanf("%c", r); // <-- е
