@@ -18,14 +18,7 @@ double _infRadicalExpr(int iter, int limit)
     return 0;
   }
 
-  if (iter % 3 == 0)
-  {
-    return sqrt(23 - 2 * _infRadicalExpr(iter + 1, limit));
-  }
-  else
-  {
-    return sqrt(23 + 2 * _infRadicalExpr(iter + 1, limit));
-  }
+  return sqrt((6 + iter) + (2 + iter) * _infRadicalExpr(iter + 1, limit));
 }
 
 double infRadicalExpr(int limit)
@@ -47,7 +40,7 @@ int main(int argc, char const *argv[])
   } while (fabs(result - prevIter) >= pow(10, -12));
 
   printf("Infinite radical expression = %.12lf\n", result);
-  printf("Shortand = %.12lf\n", 1.0 + 4.0 * sqrt(3.0) * sin(M_PI / 9.0));
+  printf("Shortand = 4.0\n");
   getch();
   return 0;
 }
