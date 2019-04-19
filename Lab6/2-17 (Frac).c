@@ -10,6 +10,25 @@ void getch()
 #endif
 }
 
+int gcd(int x, int y)
+{
+  return (x == y) ? x : gcd((x < y) ? x : y, (x > y) ? x - y : y - x);
+}
+
+void Socr(int a, int b, int p, int q)
+{
+  int tempGcd = gcd(a, b);
+
+  if (a / tempGcd == p && b / tempGcd == q)
+  {
+    printf("+\n");
+  }
+  else
+  {
+    printf("-\n");
+  }
+}
+
 long int mulRow(int start, int end)
 {
   if (start > end)
@@ -38,6 +57,10 @@ int main(int argc, char const *argv[])
   но если его домножить на 10 (20 / 2), то число не поместится,
   поэтому допишем нолик при выводе.
   */
+
+  int a, b, p, q;
+  scanf("%d %d %d %d", &a, &b, &p, &q);
+  Socr(a, b, p, q);
 
   printf("1 / %ld0\n", mulRow(3, 20));
   getch();

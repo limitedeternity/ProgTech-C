@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
   } while (fabs(result - prevIter) >= pow(10, -12));
 
   printf("Infinite radical expression = %.12lf\n", result);
-  printf("Shortand = 4.0\n");
+  printf("Shortand = %.12lf\n", 4.0);
   getch();
   return 0;
 }
