@@ -1,15 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
-
-void getch()
-{
-#ifdef WIN32
-  system("pause");
-#else
-  system("read -n1 -p '' key");
-#endif
-}
 
 long int seq(int n)
 {
@@ -36,6 +26,5 @@ int main(int argc, char const *argv[])
   scanf("%d", &n);
   printf("%ld\n", seq(n));
   printf("%ld\n", ans(n));
-  getch();
   return 0;
 }

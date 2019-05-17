@@ -1,17 +1,21 @@
 #include <stdio.h>
 
-long long a(int n)
-{
-    if (n <= 1)
-    {
-        return 1;
-    }
-
-    return a(n - 1) * a(n - 1) + 1;
-}
-
 int main(int argc, char const *argv[])
 {
-    printf("%lld\n", a(10));
+    long long int array[10];
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 0)
+        {
+            array[i] = 1;
+        }
+        else
+        {
+            array[i] = array[i - 1] * array[i - 1] + 1;
+        }
+    }
+
+    printf("%lld\n", array[10]);
     return 0;
 }
