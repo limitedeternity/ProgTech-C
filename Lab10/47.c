@@ -85,6 +85,5 @@ int main(int argc, char const *argv[])
     }
 
     free(matrix);
-
     return 0;
 }

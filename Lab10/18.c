@@ -38,11 +38,9 @@ int main(int argc, char const *argv[])
     printf("Insert numbers to array one by one, send STOP to break input flow: \n");
     read_stdin_to_vector(&vector, 5, "STOP");
 
-    int swap;
-
     for (int i = 0; i < (vector_get_size(&vector) - (vector_get_size(&vector) & 1)) / 2; i++)
     {
-        swap = vector_get(&vector, i);
+        int swap = vector_get(&vector, i);
         vector_set(&vector, i, vector_get(&vector, vector_get_size(&vector) - 1 - i));
         vector_set(&vector, vector_get_size(&vector) - 1 - i, swap);
     }
