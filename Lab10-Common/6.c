@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
     {
         if (*(array + i) < 0.0)
         {
-            for (int j = i; j < 10; j++)
+            for (int j = i + 1; j < 10; j++)
             {
                 printf("%.3lf ", *(array + j));
             }
