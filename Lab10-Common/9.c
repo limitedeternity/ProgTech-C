@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
         for (int j = 0; j < 5; j++)
         {
             *(vector + j) = rand() % 20;
-            printf("%d ", *(vector + j));
+            printf("%2d ", *(vector + j));
         }
 
         printf("\n");

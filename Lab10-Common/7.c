@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
     {
         for (int j = 0; j < 6; j++)
         {
-            printf("%d ", *(*(matrix + i) + j));
+            printf("%3d ", *(*(matrix + i) + j));
         }
 
         printf("\n");
