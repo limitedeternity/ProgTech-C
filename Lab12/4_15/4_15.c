@@ -2,6 +2,10 @@
 #include <string.h>
 #include <wchar.h>
 
+/*
+   15. Напишите программу для подсчета числа букв "о", стоящих пос-
+ле буквы "л" в слове X.
+*/
 int main(int argc, char const *argv[])
 {
     wchar_t *str = L"Олово";

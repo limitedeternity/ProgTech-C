@@ -24,6 +24,7 @@ void reverse_string(char *str)
     }
 }
 
+/* Напишите, программу, записывающую слово Х в обратном порядке */
 int main(int argc, char const *argv[])
 {
     char str[256];

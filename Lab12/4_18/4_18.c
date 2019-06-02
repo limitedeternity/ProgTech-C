@@ -19,6 +19,7 @@ void find_frequency(char str[], int count[])
     }
 }
 
+/*  18. Определите букву, чаще всего встречающуюся в слове Х. */
 int main(int argc, char const *argv[])
 {
     char str[256];

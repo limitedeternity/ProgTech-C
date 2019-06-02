@@ -18,6 +18,10 @@ int isUnique(char *str)
     return 1;
 }
 
+/*
+   2. Напишите программу, проверяющую, есть ли в слове X две одина-
+ковые буквы.
+*/
 int main(int argc, char const *argv[])
 {
     char str[256];
