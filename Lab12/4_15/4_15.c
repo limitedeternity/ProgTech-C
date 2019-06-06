@@ -1,6 +1,25 @@
 #include <stdio.h>
-#include <string.h>
+#include <locale.h>
 #include <wchar.h>
+
+void getwstring(wchar_t *ws, int count)
+{
+    int x = 0;
+    wchar_t *a, wch;
+
+    a = ws;
+    while (x < count - 1)
+    {
+        wch = getwchar();
+        if (wch == '\n')
+            break;
+        *a = wch;
+        a++;
+        x++;
+    }
+
+    *a = '\0';
+}
 
 /*
    15. Напишите программу для подсчета числа букв "о", стоящих пос-
@@ -8,10 +27,13 @@
 */
 int main(int argc, char const *argv[])
 {
-    wchar_t *str = L"Олово";
-
     int lFound = 0;
     int oCount = 0;
+    wchar_t str[20];
+
+    setlocale(LC_ALL, "");
+    wprintf(L"Введите слово: ");
+    getwstring(str, 20);
 
     for (int i = 0; i < wcslen(str); i++)
     {
@@ -31,6 +53,6 @@ int main(int argc, char const *argv[])
         }
     }
 
-    printf("%d\n", oCount);
+    wprintf(L"%d\n", oCount);
     return 0;
 }
