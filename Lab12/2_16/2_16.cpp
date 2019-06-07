@@ -77,6 +77,6 @@ int main(int argc, char **argv)
         cout << split_arr[i] << " ";
     }
 
-    cout << endl; // Qqqqquikkkkkk brown    fox jumps over another fox
+    cout << endl; // Qqqqquikkkkkk brown    fox jumps over another fox -> uk rw up ve nohe
     return 0;
 }
